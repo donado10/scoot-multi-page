@@ -118,14 +118,68 @@ const HowToSectionTablet = () => {
     </section>
   );
 };
+const HowToSectionBig = () => {
+  const Template: React.FC<{ image: any; title: string; text: string }> = ({
+    image,
+    title,
+    text,
+  }) => {
+    return (
+      <div className="flex flex-col gap-4">
+        <div>
+          <Image src={image} alt="locate" width="128" height="128" />
+        </div>
+
+        <div>
+          <h1 className="font-primary text-xl font-bold text-scoot-dark">
+            {title}
+          </h1>
+        </div>
+        <div>
+          <p className="font-secondary text-base font-normal leading-7 text-scoot-dim">
+            {text}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <section className="flex gap-8 p-8">
+      <Template
+        image={LocateImg}
+        title="Locate with app"
+        text="Use the app to find the nearest scooter to you. We are continuously
+            placing scooters in the areas with most demand, so one should never
+            be too far away."
+      />
+      <Template
+        image={ScooterImg}
+        title="Pick your scooter"
+        text="We show the most important info for the scooters closest to you. So
+            you know how much charge they have left and can see roughly how much
+            it will cost."
+      />
+      <Template
+        image={RideImg}
+        title="Enjoy the ride"
+        text="Scan the QR code and the bike will unlock. Retract the cable lock,
+            put on a helmet, and you’re off! Always lock bikes away from
+            walkways and accessibility ramps."
+      />
+    </section>
+  );
+};
 
 const HowToSection = () => {
   const mobileScreen = useMediaQuery(EMediaQuery.MOBILE);
   const tabletScreen = useMediaQuery(EMediaQuery.SMALL);
+  const bigScreen = useMediaQuery(EMediaQuery.BIG);
   return (
     <>
       {mobileScreen && !tabletScreen && <HowToSectionSmall />}
-      {tabletScreen && <HowToSectionTablet />}
+      {tabletScreen && !bigScreen && <HowToSectionTablet />}
+      {bigScreen && <HowToSectionBig />}
     </>
   );
 };
