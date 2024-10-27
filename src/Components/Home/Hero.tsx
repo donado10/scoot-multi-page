@@ -45,19 +45,23 @@ const HeroTablet = () => {
 
 const HeroBig = () => {
   return (
-    <section className="flex aspect-[1/0.5] w-full flex-col items-center justify-center gap-10 bg-[url('/assets/images/home-hero-desktop.jpg')] bg-cover bg-no-repeat p-8">
-      <h1 className="text-center font-primary text-6xl font-bold text-white">
-        Scooter sharing made simple
-      </h1>
-      <p className="w-3/5 text-center font-secondary text-sm leading-6 text-white">
-        Scoot takes the hassle out of urban mobility. Our bikes are placed in
-        convenient locations in each of our cities. Use our app to locate the
-        nearest bike, unlock it with a tap, and you’re away!
-      </p>
+    <section className="flex aspect-[1/0.5] w-full items-center justify-start gap-10 bg-[url('/assets/images/home-hero-desktop.jpg')] bg-cover bg-no-repeat p-8 px-64">
+      <div className="flex w-[40rem] flex-col gap-16">
+        <h1 className="font-primary text-6xl font-bold text-white">
+          Scooter sharing made simple
+        </h1>
+        <div className="flex w-fit flex-col items-end gap-8 self-end">
+          <p className="w-[25rem] text-justify font-secondary text-sm leading-6 text-white">
+            Scoot takes the hassle out of urban mobility. Our bikes are placed
+            in convenient locations in each of our cities. Use our app to locate
+            the nearest bike, unlock it with a tap, and you’re away!
+          </p>
 
-      <button className="bg-scoot-yellow p-4 px-8 text-white">
-        Get Scootin
-      </button>
+          <button className="w-fit self-start bg-scoot-yellow p-4 px-8 text-white">
+            Get Scootin
+          </button>
+        </div>
+      </div>
     </section>
   );
 };
