@@ -2,6 +2,7 @@ import React from "react";
 import TitlePage from "@/Components/TitlePage";
 import AboutDescriptionSection from "@/Components/About/AboutDescriptionSection";
 import AboutValueSection from "@/Components/About/AboutValuesSection";
+import AboutFAQSection from "@/Components/About/AboutFAQSection";
 
 export default function About() {
   return (
@@ -10,6 +11,7 @@ export default function About() {
         <TitlePage title="About" />
         <AboutDescriptionSection />
         <AboutValueSection />
+        <AboutFAQSection />
       </div>
     </div>
   );
