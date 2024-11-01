@@ -32,7 +32,7 @@ const WhyJoinUsSectionSmall = () => {
     <section className="flex flex-col gap-16 p-8">
       <div>
         <h1 className="text-center font-primary text-3xl font-bold text-scoot-dark">
-          Why oin us
+          Why join us ?
         </h1>
       </div>
       <Template
@@ -81,7 +81,7 @@ const WhyJoinUsSectionBig = () => {
     <section className="flex flex-col gap-16 p-8">
       <div>
         <h1 className="text-center font-primary text-3xl font-bold text-scoot-dark">
-          Why oin us
+          Why join us ?
         </h1>
       </div>
       <div className="flex items-center justify-center gap-4">

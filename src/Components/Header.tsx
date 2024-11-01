@@ -44,10 +44,11 @@ const HeaderMobile = () => {
               )}
             </button>
           </div>
-
-          <h1 className="font-primary text-3xl font-bold text-scoot-dark">
-            scoot
-          </h1>
+          <Link href="/">
+            <h1 className="font-primary text-3xl font-bold text-scoot-dark">
+              scoot
+            </h1>
+          </Link>
         </div>
         {isMenuEnable && (
           <div
@@ -102,9 +103,11 @@ const HeaderTablet = () => {
     <div ref={headerRef}>
       <div className={`${classParent}`}>
         <div className="flex items-center gap-16">
-          <h1 className="font-primary text-3xl font-bold text-scoot-dark">
-            scoot
-          </h1>
+          <Link href="/">
+            <h1 className="font-primary text-3xl font-bold text-scoot-dark">
+              scoot
+            </h1>
+          </Link>
           <div className="flex items-center gap-4 font-primary text-xl font-semibold text-scoot-dim">
             <div>
               <Link href="/about">About</Link>

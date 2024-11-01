@@ -39,7 +39,7 @@ const WorldMapSectionTablet = () => {
     <section className="flex flex-col">
       <div className="flex items-center justify-center">
         <Image
-          src="/assets/images/world-map-tablet.png"
+          src="/assets/images/world-map-tablet2.png"
           width="689"
           height="337"
           alt="world map"
@@ -53,7 +53,7 @@ const WorldMapSectionDesktop = () => {
     <section className="flex flex-col">
       <div className="flex items-center justify-center">
         <Image
-          src="/assets/images/world-map-desktop.png"
+          src="/assets/images/world-map-desktop2.png"
           width="1110"
           height="543"
           alt="world map"
