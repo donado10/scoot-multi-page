@@ -80,30 +80,48 @@ const HeaderMobile = () => {
 };
 
 const HeaderTablet = () => {
+  const headerRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const isVisible = useIsVisible(headerRef);
+  const [classParent, setClassParent] = useState<string>(
+    "flex w-full items-center justify-between bg-white p-6",
+  );
+
+  useEffect(() => {
+    if (isVisible) {
+      setClassParent("flex w-full items-center justify-between bg-white p-6");
+      return;
+    } else {
+      setClassParent(
+        "fixed flex w-full items-center justify-between bg-white p-6",
+      );
+      return;
+    }
+  }, [isVisible]);
+
   return (
-    <div
-      className={`fixed flex w-full items-center justify-between bg-white p-6`}
-    >
-      <div className="flex items-center gap-16">
-        <h1 className="font-primary text-3xl font-bold text-scoot-dark">
-          scoot
-        </h1>
-        <div className="flex items-center gap-4 font-primary text-xl font-semibold text-scoot-dim">
-          <div>
-            <Link href="/about">About</Link>
-          </div>
-          <div>
-            <Link href="/location">Location</Link>
-          </div>
-          <div>
-            <Link href="/careers">Careers</Link>
+    <div ref={headerRef}>
+      <div className={`${classParent}`}>
+        <div className="flex items-center gap-16">
+          <h1 className="font-primary text-3xl font-bold text-scoot-dark">
+            scoot
+          </h1>
+          <div className="flex items-center gap-4 font-primary text-xl font-semibold text-scoot-dim">
+            <div>
+              <Link href="/about">About</Link>
+            </div>
+            <div>
+              <Link href="/location">Location</Link>
+            </div>
+            <div>
+              <Link href="/careers">Careers</Link>
+            </div>
           </div>
         </div>
-      </div>
-      <div>
-        <button className="bg-scoot-yellow p-4 px-8 text-white">
-          Get Scootin
-        </button>
+        <div>
+          <button className="bg-scoot-yellow p-4 px-8 text-white">
+            Get Scootin
+          </button>
+        </div>
       </div>
     </div>
   );

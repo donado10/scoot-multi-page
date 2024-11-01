@@ -1,6 +1,4 @@
 import DescriptionSection from "@/Components/Home/DescriptionSection";
-import FooterSection from "@/Components/FooterSection";
-import { Header } from "@/Components/Header";
 import { Hero } from "@/Components/Home/Hero";
 import HowToSection from "@/Components/Home/HowToSection";
 
