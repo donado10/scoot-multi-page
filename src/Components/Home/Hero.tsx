@@ -4,6 +4,7 @@ import useMediaQuery, { EMediaQuery } from "@/Hooks/useMediaQuery";
 import React from "react";
 import Image from "next/image";
 import LeftDownwordArrImg from "@/assets/patterns/left-downward-arrow.svg";
+import WhiteCirclesImg from "@/assets/patterns/white-circles.svg";
 //import HeroImg from "@/assets/images/home-hero-mobile.jpg";
 
 const HeroSmall = () => {
@@ -31,7 +32,7 @@ const HeroSmall = () => {
 
 const HeroTablet = () => {
   return (
-    <section className="flex aspect-[1/1] w-full flex-col items-center justify-center gap-10 bg-[url('/assets/images/home-hero-tablet.jpg')] bg-cover bg-no-repeat p-8">
+    <section className="relative -z-10 flex aspect-[1/1] w-full flex-col items-center justify-center gap-10 bg-[url('/assets/images/home-hero-tablet.jpg')] bg-cover bg-no-repeat p-8">
       <h1 className="text-center font-primary text-6xl font-bold text-white">
         Scooter sharing made simple
       </h1>
@@ -45,8 +46,11 @@ const HeroTablet = () => {
         Get Scootin
       </button>
 
-      <div className="absolute -left-[78%] bottom-[10%] w-full -scale-x-100">
+      <div className="absolute -left-[65%] bottom-[10%] w-full -scale-x-100">
         <Image src={LeftDownwordArrImg} alt="" />
+      </div>
+      <div className="absolute bottom-[10%] right-0 w-full">
+        <Image src={WhiteCirclesImg} className="ml-auto" alt="" />
       </div>
     </section>
   );

@@ -6,6 +6,7 @@ import LocateImg from "@/assets/icons/locate.svg";
 import ScooterImg from "@/assets/icons/scooter.svg";
 import RideImg from "@/assets/icons/ride.svg";
 import useMediaQuery, { EMediaQuery } from "@/Hooks/useMediaQuery";
+import PathPatternImg from "@/assets/patterns/Path.svg";
 
 const HowToSectionSmall = () => {
   return (
@@ -93,7 +94,10 @@ const HowToSectionTablet = () => {
   };
 
   return (
-    <section className="flex flex-col gap-8 p-8">
+    <section className="relative -z-20 flex flex-col gap-8 p-8">
+      <div className="absolute -top-20 left-[181px] -z-30 border-2">
+        <Image src={PathPatternImg} alt="" />
+      </div>
       <Template
         image={LocateImg}
         title="Locate with app"
