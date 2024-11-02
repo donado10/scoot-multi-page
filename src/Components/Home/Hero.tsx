@@ -2,12 +2,13 @@
 
 import useMediaQuery, { EMediaQuery } from "@/Hooks/useMediaQuery";
 import React from "react";
-//import Image from "next/image";
+import Image from "next/image";
+import LeftDownwordArrImg from "@/assets/patterns/left-downward-arrow.svg";
 //import HeroImg from "@/assets/images/home-hero-mobile.jpg";
 
 const HeroSmall = () => {
   return (
-    <section className="flex aspect-[1/1.7] w-full flex-col items-center justify-center gap-10 bg-[url('/assets/images/home-hero-mobile.jpg')] bg-cover bg-no-repeat p-4">
+    <section className="relative -z-10 flex aspect-[1/1.7] w-full flex-col items-center justify-center gap-10 bg-[url('/assets/images/home-hero-mobile.jpg')] bg-cover bg-no-repeat p-4">
       <h1 className="text-center font-primary text-4xl font-bold text-white">
         Scooter sharing made simple
       </h1>
@@ -20,6 +21,10 @@ const HeroSmall = () => {
       <button className="bg-scoot-yellow p-4 px-8 text-white">
         Get Scootin
       </button>
+
+      <div className="absolute -left-[78%] bottom-[10%] w-full -scale-x-100">
+        <Image src={LeftDownwordArrImg} alt="" />
+      </div>
     </section>
   );
 };
@@ -39,6 +44,10 @@ const HeroTablet = () => {
       <button className="bg-scoot-yellow p-4 px-8 text-white">
         Get Scootin
       </button>
+
+      <div className="absolute -left-[78%] bottom-[10%] w-full -scale-x-100">
+        <Image src={LeftDownwordArrImg} alt="" />
+      </div>
     </section>
   );
 };

@@ -26,11 +26,11 @@ const HeaderMobile = () => {
   }, [isVisible]);
 
   return (
-    <div ref={headerRef}>
+    <div ref={headerRef} className="w-screen">
       <div
-        className={`${classParent} ${isMenuEnable ? "fixed min-h-screen" : ""} `}
+        className={`${classParent} ${isMenuEnable ? "fixed z-50 min-h-screen" : ""} `}
       >
-        <div className="relative flex w-full items-center justify-center bg-white p-6">
+        <div className="relative flex w-screen items-center justify-center bg-white p-6">
           <div className="absolute inset-0 left-8 flex h-full w-fit items-center justify-center">
             <button
               className="h-fit w-fit"

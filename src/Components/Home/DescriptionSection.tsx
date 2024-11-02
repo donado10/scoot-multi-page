@@ -1,19 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { ReactElement } from "react";
 import Image from "next/image";
 import useMediaQuery, { EMediaQuery } from "@/Hooks/useMediaQuery";
+import LeftDownwordArrImg from "@/assets/patterns/left-downward-arrow.svg";
 
 const DescriptionSectionSmall = () => {
   const Template: React.FC<{
     image: string;
     title: string;
     text: string;
-  }> = ({ image, title, text }) => {
+    element?: ReactElement;
+  }> = ({ image, title, text, element }) => {
     return (
-      <div className="flex flex-col items-center gap-4">
-        <div className="aspect-square w-[200px] overflow-hidden rounded-full">
-          <Image src={image} alt="locate" width="300" height="300" />
+      <div className="flex w-full flex-col items-center gap-4">
+        <div className="relative flex w-full items-center justify-center">
+          <div className="aspect-square w-[400px] overflow-hidden rounded-full">
+            <Image src={image} alt="locate" width="500" height="500" />
+          </div>
+          {element}
         </div>
         <div>
           <h1 className="text-center font-primary text-3xl font-bold text-scoot-dark">
@@ -33,7 +38,7 @@ const DescriptionSectionSmall = () => {
     );
   };
   return (
-    <section className="flex flex-col gap-16 p-8">
+    <section className="-z-10 flex flex-col gap-16 p-8">
       <Template
         image="/assets/images/telemetry.jpg"
         title="Easy to use riding telemetry"
@@ -41,6 +46,11 @@ const DescriptionSectionSmall = () => {
             show you your average speed, how long you've been using the scooter,
             your traveling distance, and many more things all in an easy to use
             app."
+        element={
+          <div className="absolute -right-[15rem] bottom-[15%]">
+            <Image src={LeftDownwordArrImg} width={735} height={138} alt="" />
+          </div>
+        }
       />
       <Template
         image="/assets/images/near-you.jpg"
@@ -49,6 +59,11 @@ const DescriptionSectionSmall = () => {
             rapidly, so be sure to let us know if you want to see us in your
             hometown. We’re aiming to let our scooters loose on 23 cities over
             the coming year."
+        element={
+          <div className="absolute -left-[30rem] top-0 -scale-x-100">
+            <Image src={LeftDownwordArrImg} width={735} height={138} alt="" />
+          </div>
+        }
       />
       <Template
         image="/assets/images/payments.jpg"
@@ -57,6 +72,11 @@ const DescriptionSectionSmall = () => {
             and debit cards. You can also link your PayPal account inside the
             app. Need to pay later? No worries! You can defer payment for up to
             a month."
+        element={
+          <div className="absolute -right-[30rem] top-0">
+            <Image src={LeftDownwordArrImg} width={735} height={138} alt="" />
+          </div>
+        }
       />
     </section>
   );

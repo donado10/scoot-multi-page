@@ -4,8 +4,8 @@ import HowToSection from "@/Components/Home/HowToSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
-      <div className="flex w-full flex-col gap-8">
+    <div className="flex w-screen flex-col">
+      <div className="flex w-screen flex-col gap-8">
         <Hero />
         <HowToSection />
         <DescriptionSection />
