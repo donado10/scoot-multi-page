@@ -16,7 +16,7 @@ import SemiCirclesImg from "@/assets/patterns/semi-circles.svg";
 const FooterSectionSmall = () => {
   return (
     <>
-      <div className="relative -z-10 flex flex-col gap-8 overflow-hidden bg-scoot-dark p-4 py-28">
+      <div className="overflow- relative -z-10 flex flex-col gap-8 bg-scoot-dark p-4 py-28">
         <div>
           <h1 className="text-center font-primary text-4xl font-bold text-scoot-light">
             Sign up and Scoot off today
@@ -38,7 +38,7 @@ const FooterSectionSmall = () => {
             />
           </button>
         </div>
-        <div className="absolute -bottom-[7rem] -left-[30rem] flex h-[347px] w-[1153px] items-center justify-end">
+        <div className="absolute right-0 flex h-[347px] w-[1153px] items-center justify-end">
           <Image src={SemiCirclesImg} width={1153} height={347} alt="" />
         </div>
       </div>
@@ -74,7 +74,7 @@ const FooterSectionSmall = () => {
 const FooterSectionBig = () => {
   return (
     <>
-      <div className="flex items-center justify-between gap-8 bg-scoot-dark p-4 py-28">
+      <div className="relative flex items-center justify-between gap-8 overflow-hidden bg-scoot-dark p-4 py-28">
         <div>
           <h1 className="text-center font-primary text-4xl font-bold text-scoot-light">
             Sign up and Scoot off today
@@ -95,6 +95,9 @@ const FooterSectionBig = () => {
               className="h-full w-full"
             />
           </button>
+        </div>
+        <div className="absolute right-0 flex h-[347px] w-[1153px] translate-y-16 items-center justify-end">
+          <Image src={SemiCirclesImg} width={1153} height={347} alt="" />
         </div>
       </div>
       <div className="flex items-center justify-between gap-4 bg-[#333A44] p-4 py-10">
