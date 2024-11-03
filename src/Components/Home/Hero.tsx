@@ -46,7 +46,7 @@ const HeroTablet = () => {
         Get Scootin
       </button>
 
-      <div className="absolute -left-[65%] bottom-[10%] w-full -scale-x-100">
+      <div className="absolute -left-[65%] bottom-[20%] w-full -scale-x-100">
         <Image src={LeftDownwordArrImg} alt="" />
       </div>
       <div className="absolute bottom-[10%] right-0 w-full">
@@ -58,9 +58,9 @@ const HeroTablet = () => {
 
 const HeroBig = () => {
   return (
-    <section className="flex aspect-[1/0.5] w-full items-center justify-start gap-10 bg-[url('/assets/images/home-hero-desktop.jpg')] bg-cover bg-no-repeat p-8 px-64">
-      <div className="flex w-[40rem] flex-col gap-16">
-        <h1 className="font-primary text-6xl font-bold text-white">
+    <section className="relative flex aspect-[1/0.5] w-full items-center justify-start gap-10 bg-[url('/assets/images/home-hero-desktop.jpg')] bg-cover bg-no-repeat p-8 pl-20">
+      <div className="flex w-[30rem] flex-col gap-12">
+        <h1 className="font-primary text-5xl font-bold text-white">
           Scooter sharing made simple
         </h1>
         <div className="flex w-fit flex-col items-end gap-8 self-end">
@@ -74,6 +74,13 @@ const HeroBig = () => {
             Get Scootin
           </button>
         </div>
+      </div>
+      <div className="absolute"></div>
+      <div className="absolute bottom-[27%] right-[20%] w-full -scale-x-100">
+        <Image src={LeftDownwordArrImg} className="w-[30%]" alt="" />
+      </div>
+      <div className="absolute bottom-[25%] right-0 w-full">
+        <Image src={WhiteCirclesImg} className="ml-auto w-[10%]" alt="" />
       </div>
     </section>
   );
